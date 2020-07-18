@@ -76,6 +76,7 @@
 // 3 Netlify's serverless function - Reference only
 import axios from "axios";
 import { useState, useEffect } from "react";
+import getvideos from "../../functions/getVideos";
 // import youtube from "../apis/youtube";
 // import { API_KEY } from "../apis/video-hooks-api"; // No longer using.  Instead API calls will be made via Netlify's ServerLess functions.
 
@@ -94,10 +95,14 @@ const useVideos = (defaultSearchTerm) => {
   const search = (term) => {
     console.log("Perform api call from our app dev http://localhost:3000");
 
-    axios
-      .get("/.netlify/functions/getvideos", { term: term })
-      .then((response) => setVideos(response))
-      .catch((err) => console.log("Error:", err));
+    const response = getvideos(term);
+    setVideos(response);
+
+    // axios
+    //   .get("/.netlify/functions/getvideos", { term: term })
+    //   .then((response) => setVideos(response))
+    //   .catch((err) => console.log("Error:", err));
+
     // , {
     // crossDomain: true,
     // headers: { "Content-Type": "text/plain" },
