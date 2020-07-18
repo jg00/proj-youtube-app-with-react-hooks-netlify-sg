@@ -96,7 +96,9 @@ const useVideos = (defaultSearchTerm) => {
     console.log("Perform api call from our app dev http://localhost:3000");
 
     axios
-      .get("/.netlify/functions/getvideos")
+      .get(
+        "https://naughty-minsky-7ba47b.netlify.app/.netlify/functions/getvideos"
+      )
       .then((response) => setVideos(response))
       .catch((err) => console.log("Error:", err));
     // , {
