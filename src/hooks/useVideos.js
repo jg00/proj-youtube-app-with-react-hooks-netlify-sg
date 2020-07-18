@@ -108,7 +108,7 @@ const useVideos = (defaultSearchTerm) => {
     axios
       .get("/api/yes")
       .then((response) => {
-        setVideos(response);
+        setVideos(JSON.parse(response));
       })
       .catch((err) => console.log("Error:", err));
   };
