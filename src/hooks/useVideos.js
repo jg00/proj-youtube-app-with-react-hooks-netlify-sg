@@ -95,7 +95,7 @@ const useVideos = (defaultSearchTerm) => {
     console.log("Perform api call from our app dev http://localhost:3000");
 
     axios
-      .get("/getvideos", { term: term })
+      .get("/.netlify/functions/getvideos", { term: term })
       .then((response) => setVideos(response))
       .catch((err) => console.log("Error:", err));
     // , {

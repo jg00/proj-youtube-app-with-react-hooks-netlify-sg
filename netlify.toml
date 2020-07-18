@@ -1,8 +1,3 @@
 [build]
   public = ""
   functions = "lambda"
-
-[[redirects]]
-  from = "/getvideos"
-  to="/.netlify/functions"
-  status = 200
