@@ -106,13 +106,18 @@ const useVideos = (defaultSearchTerm) => {
   // Previous version
   const search = (term) => {
     axios
-      .get("/.netlify/functions/getVideos")
-      // .get("/api/yes")
+      .get(
+        "https://naughty-minsky-7ba47b.netlify.app/.netlify/functions/getVideos"
+      )
       .then((response) => {
+        console.log(response);
         setVideos(JSON.parse(response));
       })
       .catch((err) => console.log("Error:", err));
   };
+
+  // .get("/.netlify/functions/getVideos")
+  // .get("/api/yes")
 
   // .get("/.netlify/functions/getvideos") // production
 
