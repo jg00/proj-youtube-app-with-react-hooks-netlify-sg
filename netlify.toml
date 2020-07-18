@@ -1,5 +1,5 @@
 [build]
-  publish = "lambda/"
+  publish = ""
   functions = "./lambda"
 
 [[redirects]]
