@@ -1,2 +1,7 @@
 [build]
-  functions = "lambda"
+  functions = "lambda/"
+
+[[redirects]]
+  from = "/getvideos"
+  to="https://www.googleapis.com/youtube/v3"
+  status = 200
