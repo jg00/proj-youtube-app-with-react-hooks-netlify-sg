@@ -28,8 +28,8 @@ exports.handler = function (event, context, callback) {
   };
 
   // Perform API call
-  const getVideos = (term) => {
-    console.log("getVideos terms:", term);
+  const getvideos = (term) => {
+    console.log("getvideos terms:", term);
     axios
       .get(`${API_URL}/search`, {
         params: {
@@ -41,7 +41,7 @@ exports.handler = function (event, context, callback) {
         },
       })
       .then((res) => {
-        console.log("getVideos API response");
+        console.log("getvideos API response");
         // console.log(res);
         // send(res);
         send(res.data.items);
@@ -51,7 +51,7 @@ exports.handler = function (event, context, callback) {
 
   // Make sure method is GET
   if (event.httpMethod === "GET") {
-    getVideos(term);
+    getvideos(term);
   }
 };
 
