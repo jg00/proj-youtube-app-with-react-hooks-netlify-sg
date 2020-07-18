@@ -51,6 +51,7 @@ exports.handler = function (event, context, callback) {
 
   // Make sure method is GET
   if (event.httpMethod === "GET") {
+    console.log("HERE?");
     getVideos(term);
   }
 };
