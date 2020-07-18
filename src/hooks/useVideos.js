@@ -109,7 +109,7 @@ const useVideos = (defaultSearchTerm) => {
       .get("/.netlify/functions/getVideos")
       // .get("/api/yes")
       .then((response) => {
-        setVideos(response);
+        setVideos(JSON.parse(response));
       })
       .catch((err) => console.log("Error:", err));
   };
