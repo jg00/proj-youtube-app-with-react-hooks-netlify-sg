@@ -109,8 +109,8 @@ const useVideos = (defaultSearchTerm) => {
       .get("/.netlify/functions/getVideos")
       .then((response) => {
         const result = response;
-        console.log(result);
-        setVideos(result);
+        // console.log(result);
+        setVideos(JSON.parse(result.data));
       })
       .catch((err) => console.log("Error:", err));
   };
