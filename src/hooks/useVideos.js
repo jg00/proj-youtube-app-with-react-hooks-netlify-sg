@@ -106,7 +106,8 @@ const useVideos = (defaultSearchTerm) => {
   // Previous version
   const search = (term) => {
     axios
-      .get("/api/yes")
+      .get("/.netlify/functions/getVideos")
+      // .get("/api/yes")
       .then((response) => {
         setVideos(JSON.parse(response));
       })
