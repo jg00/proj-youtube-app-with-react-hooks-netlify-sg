@@ -1,8 +1,9 @@
 [build]
   publish = ""
-  functions = "./lambda"
+  command = "echo building here"
+  functions = "lambda/"
 
 [[redirects]]
   from = "/getvideos"
-  to="https://naughty-minsky-7ba47b.netlify.app"
+  to="/.netlify/functions/getvideos"
   status = 200
