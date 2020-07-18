@@ -110,7 +110,7 @@ const useVideos = (defaultSearchTerm) => {
       .then((response) => {
         const result = response;
         // console.log(result);
-        setVideos(JSON.parse(result.data));
+        setVideos(result.data);
       })
       .catch((err) => console.log("Error:", err));
   };
