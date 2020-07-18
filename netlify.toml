@@ -4,5 +4,5 @@
 
 [[redirects]]
   from = "/getvideos"
-  to="https://www.googleapis.com/youtube/v3"
+  to="/.netlify/functions"
   status = 200
