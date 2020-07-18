@@ -1,6 +1,7 @@
 [build]
-  publish = ""
-  functions = "build/lambda/"
+  publish = "videos-hooks-w-netlify-serverless-function-TEST/build/"
+  functions = "videos-hooks-w-netlify-serverless-function-TEST/src/lambda/"
+  base = "videos-hooks-w-netlify-serverless-function-TEST"
 
   
 
