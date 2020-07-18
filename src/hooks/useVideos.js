@@ -108,7 +108,7 @@ const useVideos = (defaultSearchTerm) => {
     axios
       .get("/.netlify/functions/getVideos")
       .then((response) => {
-        const result = JSON.parse(response);
+        const result = response;
         console.log(result);
         setVideos(result);
       })
