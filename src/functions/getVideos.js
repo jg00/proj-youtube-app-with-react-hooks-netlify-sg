@@ -15,7 +15,7 @@ exports.handler = function (event, context, callback) {
   const send = (body) => {
     callback(null, {
       statusCode: 200,
-      body: JSON.stringify(body),
+      body: JSON.stringify({ body: body }),
       // headers: {
       // "Access-Control-Allow-Origin": "*",
       // "Access-Control-Allow-Headers":
