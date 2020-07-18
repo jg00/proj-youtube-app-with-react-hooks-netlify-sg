@@ -1,4 +1,5 @@
 [build]
+  public = ""
   functions = "lambda/"
 
 [[redirects]]
