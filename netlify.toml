@@ -4,3 +4,9 @@
   functions = "func/"
 
 
+[[redirects]]
+  from = "/api/yes"
+  to="/.netlify/functions/getvideos"
+  status = 200
+
+
