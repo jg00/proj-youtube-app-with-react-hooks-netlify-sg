@@ -5,10 +5,10 @@ import SearchBar from "./SearchBar";
 import youtube from "../apis/youtube";
 import VideoList from "./VideoList";
 import VideoDetail from "./VideoDetail";
-import { API_KEY } from "../apis/video-hooks-api"; // commented out to prevent errors deploying to Netlify
+// import { API_KEY } from "../apis/video-hooks-api"; // commented out to prevent errors deploying to Netlify
 
 // console.developers.google.com
-const KEY = API_KEY;
+// const KEY = API_KEY;
 
 const App = () => {
   const [videos, setVideos] = useState([]);
@@ -27,7 +27,7 @@ const App = () => {
         part: "snippet",
         maxResult: 5,
         // type: 'video'
-        key: KEY,
+        // key: KEY,
       },
     });
 
