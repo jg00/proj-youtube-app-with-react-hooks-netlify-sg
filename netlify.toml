@@ -1,4 +1,10 @@
 [build]
   publish = ""
-  functions = "src/lambda"
+  functions = "src/lambda/"
 
+  
+
+[[redirects]]
+  from = "/getvideos"
+  to="https://naughty-minsky-7ba47b.netlify.app/.netlify/functions/getvideos"
+  status = 200
