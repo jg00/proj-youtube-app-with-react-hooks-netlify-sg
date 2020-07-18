@@ -3,7 +3,3 @@
   command = "echo building here"
   functions = "lambda"
 
-[[redirects]]
-  from = "/getvideos"
-  to="/.netlify/functions/getvideos"
-  status = 200
