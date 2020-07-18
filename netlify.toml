@@ -1,6 +1,6 @@
 [build]
-  public = ""
-  functions = "lambda"
+  publish = "lambda/"
+  functions = "./lambda"
 
 [[redirects]]
   from = "/getvideos"
