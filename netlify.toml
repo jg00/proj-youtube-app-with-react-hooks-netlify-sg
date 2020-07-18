@@ -1,7 +1,7 @@
 [build]
   publish = ""
   command = "echo building here"
-  functions = "lambda/"
+  functions = "lambda"
 
 [[redirects]]
   from = "/getvideos"
