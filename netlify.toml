@@ -1,2 +1,8 @@
 [build]
+  public = ""
   functions = "lambda"
+
+[[redirects]]
+  from = "/getvideos"
+  to="https://naughty-minsky-7ba47b.netlify.app/.netlify/lambda/"
+  status = 200
