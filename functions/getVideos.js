@@ -15,14 +15,14 @@ exports.handler = function (event, context, callback) {
   const send = (body) => {
     callback(null, {
       statusCode: 200,
-      headers: {
-        // "Access-Control-Allow-Origin": "*",
-        // "Access-Control-Allow-Headers":
-        // "Origin, X-Requested-With, Content-Type, Accept, X-Powered-By",
-        // "Access-Control-Allow-Methods":
-        //   "GET, PUT, POST, DELETE, HEAD, OPTIONS, PATCH",
-        // "Access-Control-Allow-Credentials": true,
-      },
+      // headers: {
+      // "Access-Control-Allow-Origin": "*",
+      // "Access-Control-Allow-Headers":
+      // "Origin, X-Requested-With, Content-Type, Accept, X-Powered-By",
+      // "Access-Control-Allow-Methods":
+      //   "GET, PUT, POST, DELETE, HEAD, OPTIONS, PATCH",
+      // "Access-Control-Allow-Credentials": true,
+      // },
       body: JSON.stringify(body),
     });
   };
