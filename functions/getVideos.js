@@ -33,7 +33,7 @@ exports.handler = function (event, context, callback) {
     axios
       .get(`${API_URL}/search`, {
         params: {
-          q: term,
+          q: term.term,
           part: "snippet",
           maxResult: 5,
           // type: "video",
