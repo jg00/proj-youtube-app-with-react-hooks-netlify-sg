@@ -1,9 +1,11 @@
 [build]
-  command = "npm run build && netlify-lambda build src/functions"
-  publish = "build"
-  functions = "build/lambda/"
+  publish = ""
+  command = "npm run build && npm run lambda-build"
+  functions = "func/"
+
+
 
 [[redirects]]
-  from = "/getvideos"
-  to="https://naughty-minsky-7ba47b.netlify.app/.netlify/functions/getvideos"
+  from = "/api/yes"
+  to="/.netlify/functions/getvideos"
   status = 200

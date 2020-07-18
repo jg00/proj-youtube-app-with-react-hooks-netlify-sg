@@ -1,4 +1,6 @@
 // Netlify serverless function to retreive vidoe list from API.
+// /.netlify/functions/getvideos
+
 import axios from "axios";
 
 exports.handler = function (event, context, callback) {
@@ -15,6 +17,7 @@ exports.handler = function (event, context, callback) {
   const send = (body) => {
     callback(null, {
       statusCode: 200,
+      body: JSON.stringify(body),
       // headers: {
       // "Access-Control-Allow-Origin": "*",
       // "Access-Control-Allow-Headers":
@@ -23,7 +26,6 @@ exports.handler = function (event, context, callback) {
       //   "GET, PUT, POST, DELETE, HEAD, OPTIONS, PATCH",
       // "Access-Control-Allow-Credentials": true,
       // },
-      body: JSON.stringify(body),
     });
   };
 
@@ -75,3 +77,12 @@ exports.handler = function (event, context, callback) {
 // const URL = "https://www.googleapis.com/youtube/v3/search?q=buildings&part=snippet&maxResult=5&key=********************";
 // const URL = `${API_URL}/search?q=${term}&part=snippet&maxResult=5&key=${API_KEY}`;
 // console.log(URL);
+
+// exports.handler = function (event, context, callback) {
+//   console.log("test");
+
+//   callback(null, {
+//     statusCode: 200,
+//     body: JSON.stringify({ msg: "yep yep" }),
+//   });
+// };

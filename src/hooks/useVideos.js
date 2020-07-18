@@ -92,37 +92,42 @@ const useVideos = (defaultSearchTerm) => {
   }, [defaultSearchTerm]);
 
   // Callback - Pass down to SearchBar.  Update videos list.
+  // const search = (term) => {
+  //   let url = "/api/yes";
+  //   fetch(url)
+  //     .then((resp) => resp.text())
+  //     .then((content) => {
+  //       console.log("here?");
+  //       // setVideos([content]);
+  //     })
+  //     .catch((err) => console.log(err));
+  // };
+
+  // Previous version
   const search = (term) => {
-    console.log("Perform api call from our app dev http://localhost:3000");
-
     axios
-      .get(
-        "https://naughty-minsky-7ba47b.netlify.app/.netlify/functions/getvideos"
-      )
-      .then((response) => setVideos(response))
+      .get("/api/yes")
+      .then((response) => {
+        setVideos(response);
+      })
       .catch((err) => console.log("Error:", err));
-    // , {
-    // crossDomain: true,
-    // headers: { "Content-Type": "text/plain" },
-    // withCredentials: true,
-    // credentials: "same-origin",
-    // })
-
-    // .get("/.netlify/functions/getvideos") // production
-
-    // const response = await youtube.get("/search", {
-    //   params: {
-    //     q: term,
-    //     part: "snippet",
-    //     maxResult: 5,
-    //     // type: 'video'
-    //     key: KEY,
-    //   },
-    // });
-
-    // setVideos(response.data.items);
-    // setVideos(response);
   };
+
+  // .get("/.netlify/functions/getvideos") // production
+
+  // const response = await youtube.get("/search", {
+  //   params: {
+  //     q: term,
+  //     part: "snippet",
+  //     maxResult: 5,
+  //     // type: 'video'
+  //     key: KEY,
+  //   },
+  // });
+
+  // setVideos(response.data.items);
+  // setVideos(response);
+  // };
 
   return [videos, search]; // Like useState() convention. 'videos' is our state.  'search' is our functiom we can use to get a list of videos.
   // return {videos, onTermSubmit} // JS convention works as well
